@@ -155,8 +155,8 @@ class Simulation:
 
     def stop(self):  # Quit mode
         self.mode   = self.end
-        datalog.reset()        
-#        datalog.save()
+        datalog.reset()
+        # datalog.save()
         return
 
     def start(self):  # Back to op-mode: run after HOLD/PAUSE
