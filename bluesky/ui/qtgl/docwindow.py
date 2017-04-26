@@ -1,29 +1,29 @@
-try:
-    from PyQt5.QtCore import QUrl, QFileInfo
-    from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
-    from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
+#try:
+from PyQt5.QtCore import QUrl, QFileInfo
+from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
+from PyQt5.QtWebKitWidgets import QWebView as QWebEngineView, QWebPage as QWebEnginePage
 
-    class DocView(QWebEngineView):
-        def __init__(self, parent=None):
-            super(DocView, self).__init__(parent)
+class DocView(QWebEngineView):
+    def __init__(self, parent=None):
+        super(DocView, self).__init__(parent)
 
-            class DocPage(QWebEnginePage):
-                def __init__(self, parent=None):
-                    super(DocPage, self).__init__(parent)
+        class DocPage(QWebEnginePage):
+            def __init__(self, parent=None):
+                super(DocPage, self).__init__(parent)
 
-                def acceptNavigationRequest(self, url, navtype, ismainframe):
-                    if navtype == self.NavigationTypeLinkClicked:
-                        if url.url()[:6].lower() == 'stack:':
-                            DocWindow.app.stack(url.url()[6:].lower())
-                            return False
+            def acceptNavigationRequest(self, url, navtype, ismainframe):
+                if navtype == self.NavigationTypeLinkClicked:
+                    if url.url()[:6].lower() == 'stack:':
+                        DocWindow.app.stack(url.url()[6:].lower())
+                        return False
 
-                    return True
-            self.page = DocPage()
-            self.setPage(self.page)
-except:
-    from PyQt4.QtCore import QUrl, QFileInfo
-    from PyQt4.QtGui import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
-    from PyQt4.QtWebKit import QWebView as DocView
+                return True
+        self.page = DocPage()
+        self.setPage(self.page)
+#except:
+#    from PyQt4.QtCore import QUrl, QFileInfo
+#    from PyQt4.QtGui import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
+#    from PyQt4.QtWebKit import QWebView as DocView
 
 
 class DocWindow(QWidget):
