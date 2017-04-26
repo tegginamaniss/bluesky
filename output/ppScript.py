@@ -2,8 +2,6 @@
 
 import csv
 
-from acfttrace import AircraftTrace
-
 
 def _strip_header(logfile):
     '''Remove the preamble from the file'''
