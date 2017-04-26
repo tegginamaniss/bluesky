@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #try:
 from PyQt5.QtCore import QUrl, QFileInfo
 from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
@@ -21,11 +20,6 @@ class DocView(QWebEngineView):
                 return True
         self.page = DocPage()
         self.setPage(self.page)
-#except:
-#    from PyQt4.QtCore import QUrl, QFileInfo
-#    from PyQt4.QtGui import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
-#    from PyQt4.QtWebKit import QWebView as DocView
-=======
 try:
     from PyQt5.QtCore import QUrl, QFileInfo
     from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
@@ -57,7 +51,6 @@ except ImportError:
     from PyQt4.QtCore import QUrl, QFileInfo
     from PyQt4.QtGui import QVBoxLayout, QHBoxLayout, QWidget, QPushButton
     from PyQt4.QtWebKit import QWebView as DocView
->>>>>>> myMaster
 
 
 class DocWindow(QWidget):
