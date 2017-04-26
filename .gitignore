@@ -64,4 +64,8 @@ data/cache
 data/coefficients/BADA/*
 !/data/coefficients/BADA/README
 
+<<<<<<< HEAD
 .idea/
+=======
+.idea/workspace.xml
+>>>>>>> master
