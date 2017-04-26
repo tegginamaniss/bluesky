@@ -254,7 +254,6 @@ class Traffic(DynamicArrays):
         self.perf.create(n)
         self.trails.create(n)
 
-
     def create(self, acid=None, actype="B744", aclat=None, aclon=None, achdg=None, acalt=None, casmach=None):
         """Create an aircraft"""
 
@@ -373,7 +372,7 @@ class Traffic(DynamicArrays):
         # Relative velocity magnitude
         vrel    = sqrt(vreln * vreln + vrele * vrele)
         # Relative travel distance to closest point of approach
-        drelcpa = tlosh * vrel + sqrt(pzr * pzr - cpa * cpa)
+        drelcpa = tlosh * vrel + (0 if cpa > pzr else sqrt(pzr * pzr - cpa * cpa))
         # Initial intruder distance
         dist    = sqrt(drelcpa * drelcpa + cpa * cpa)
         # Rotation matrix diagonal and cross elements for distance vector
@@ -527,7 +526,7 @@ class Traffic(DynamicArrays):
         # Update vertical speed
         delalt   = self.pilot.alt - self.alt
         self.swaltsel = np.abs(delalt) > np.maximum(10 * ft, np.abs(2. * simdt * np.abs(self.vs)))
-        self.vs  = self.swaltsel * np.sign(delalt) * self.pilot.vs
+        self.vs  = self.swaltsel * np.sign(delalt) * np.abs(self.pilot.vs)
 
     def UpdateGroundSpeed(self, simdt):
         # Compute ground speed and track from heading, airspeed and wind
