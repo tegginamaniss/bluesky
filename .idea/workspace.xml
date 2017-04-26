@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8a1a126-8057-405a-8525-e8107c7d39ea" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlueSky.py" afterPath="$PROJECT_DIR$/BlueSky.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluesky/ui/qtgl/docwindow.py" afterPath="$PROJECT_DIR$/bluesky/ui/qtgl/docwindow.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +20,7 @@
     <SUITE FILE_PATH="coverage/bluesky$BlueSky_pygame.coverage" NAME="BlueSky_pygame Coverage Results" MODIFIED="1492700036746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bluesky$simulation.coverage" NAME="simulation Coverage Results" MODIFIED="1492604085637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bluesky/sim/pygame" />
     <SUITE FILE_PATH="coverage/bluesky$calculate_stats.coverage" NAME="calculate_stats Coverage Results" MODIFIED="1493152469472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Dropbox/AE5310 - Thesis/BS Post-processing" />
-    <SUITE FILE_PATH="coverage/bluesky$BlueSky.coverage" NAME="BlueSky Coverage Results" MODIFIED="1493202125285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bluesky$BlueSky.coverage" NAME="BlueSky Coverage Results" MODIFIED="1493204393037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bluesky$BlueSky_qtgl.coverage" NAME="BlueSky_qtgl Coverage Results" MODIFIED="1493197545148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -27,7 +29,7 @@
       <file leaf-file-name="calculate_stats" pinned="false" current-in-tab="false">
         <entry file="file://D:/Dropbox/AE5310 - Thesis/BS Post-processing/calculate_stats">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
+            <state relative-caret-position="5984">
               <caret line="358" column="24" lean-forward="false" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
               <folding>
                 <element signature="e#95#111#0" expanded="true" />
@@ -36,14 +38,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docwindow.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="docwindow.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bluesky/ui/qtgl/docwindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-              <folding>
-                <element signature="e#6#46#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="527">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,24 +58,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlueSky.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BlueSky.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BlueSky.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlueSky_qtgl.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlueSky_qtgl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +111,7 @@
         <option value="D:/Dropbox/AE5310 - Thesis/BS Post-processing/logreader.py" />
         <option value="$PROJECT_DIR$/output/ppScript.py" />
         <option value="$PROJECT_DIR$/settings.cfg" />
+        <option value="$PROJECT_DIR$/BlueSky.py" />
         <option value="$PROJECT_DIR$/bluesky/ui/qtgl/docwindow.py" />
       </list>
     </option>
@@ -157,8 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,6 +238,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -807,13 +796,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scenario/1 L1.scn">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scenario/1 L1.scn" />
     <entry file="file://$PROJECT_DIR$/bluesky/traf/traffic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -875,19 +858,11 @@
     <entry file="file://$PROJECT_DIR$/output/acfttrace.py" />
     <entry file="file://D:/Dropbox/AE5310 - Thesis/BS Post-processing/calculate_stats">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
+        <state relative-caret-position="5984">
           <caret line="358" column="24" lean-forward="false" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
           <folding>
             <element signature="e#95#111#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,21 +876,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlueSky.py">
+    <entry file="file://$PROJECT_DIR$/bluesky/ui/qtgl/docwindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="527">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bluesky/ui/qtgl/docwindow.py">
+    <entry file="file://$PROJECT_DIR$/settings.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#6#46#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlueSky.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
