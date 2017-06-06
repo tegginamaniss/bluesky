@@ -27,8 +27,10 @@ except ImportError:
 import OpenGL.GL as gl
 import numpy as np
 from ctypes import c_void_p, pointer, sizeof
-from ... import settings
+from bluesky import settings
 
+# Register settings defaults
+settings.set_variable_defaults(data_path='data')
 
 def load_texture(fname):
     img = QImage(fname)
@@ -328,8 +330,8 @@ class Font(object):
         vertices, texcoords = [], []
         w, h = char_size, char_size * self.char_ar
         x, y = vertex_offset
-        for i in range(len(text_string)):
-            v, t = self.char(x + i * w, y, w, h, ord(text_string[i]))
+        for i, c in enumerate(text_string):
+            v, t = self.char(x + i * w, y, w, h, ord(c))
             vertices  += v
             texcoords += t
 
