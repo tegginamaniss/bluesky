@@ -109,7 +109,8 @@ class CoeffBS:
 
         # parse AC files
 
-        path = os.path.join(settings.perf_path, 'BS_aircraft')
+        # path = os.path.join(settings.perf_path, 'BS_aircraft')
+        path = 'data/coefficients/BS_aircraft/'
         files = os.listdir(path)
         for fname in files:
             acdoc = ElementTree.parse(os.path.join(path, fname))
@@ -289,8 +290,10 @@ class CoeffBS:
         self.PSFC_CR     = [] # SFC cruise
 
         # parse engine files
-        path = os.path.join(settings.perf_path, 'BS_engines/')
+        # path = os.path.join(settings.perf_path, 'BS_engines/')
+        path = 'data/coefficients/BS_engines/'
         files = os.listdir(path)
+        print path
         for fname in files:
             endoc = ElementTree.parse(os.path.join(path, fname))
             self.enlist.append(endoc.find('engines/engine').text)
