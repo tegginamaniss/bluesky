@@ -65,3 +65,4 @@ data/coefficients/BADA/*
 !/data/coefficients/BADA/README
 
 .idea/workspace.xml
+.idea/inspectionProfiles
