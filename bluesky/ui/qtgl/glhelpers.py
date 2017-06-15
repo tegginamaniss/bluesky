@@ -20,15 +20,18 @@ By            :
 Date          :
 ------------------------------------------------------------------
 """
+import os
+from ctypes import c_void_p, pointer, sizeof
 try:
     from PyQt5.QtGui import QImage
 except ImportError:
     from PyQt4.QtGui import QImage
 import OpenGL.GL as gl
 import numpy as np
-from ctypes import c_void_p, pointer, sizeof
-from ... import settings
+from bluesky import settings
 
+# Register settings defaults
+settings.set_variable_defaults(gfx_path='data/graphics')
 
 def load_texture(fname):
     img = QImage(fname)
@@ -297,7 +300,7 @@ class Font(object):
 
     def create_font_array(self):
         # Load the first image to get font size
-        img          = QImage(settings.data_path + '/graphics/font/32.png')
+        img          = QImage(os.path.join(settings.gfx_path, 'font/32.png'))
         imgsize      = (img.width(), img.height())
         self.char_ar = float(imgsize[1]) / imgsize[0]
 
@@ -311,7 +314,7 @@ class Font(object):
         gl.glTexParameterf(gl.GL_TEXTURE_2D_ARRAY, gl.GL_TEXTURE_WRAP_T, gl.GL_CLAMP_TO_BORDER)
         # We're using the ASCII range 32-126; space, uppercase, lower case, numbers, brackets, punctuation marks
         for i in range(32, 127):
-            img = QImage(settings.data_path + '/graphics/font/%d.png' % i).convertToFormat(QImage.Format_ARGB32)
+            img = QImage(os.path.join(settings.gfx_path, 'font/%d.png' % i)).convertToFormat(QImage.Format_ARGB32)
             ptr = c_void_p(int(img.constBits()))
             gl.glTexSubImage3D(gl.GL_TEXTURE_2D_ARRAY, 0, 0, 0, i - 32, imgsize[0], imgsize[1], 1, gl.GL_BGRA, gl.GL_UNSIGNED_BYTE, ptr)
 
@@ -328,8 +331,8 @@ class Font(object):
         vertices, texcoords = [], []
         w, h = char_size, char_size * self.char_ar
         x, y = vertex_offset
-        for i in range(len(text_string)):
-            v, t = self.char(x + i * w, y, w, h, ord(text_string[i]))
+        for i, c in enumerate(text_string):
+            v, t = self.char(x + i * w, y, w, h, ord(c))
             vertices  += v
             texcoords += t
 

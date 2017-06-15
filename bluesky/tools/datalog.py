@@ -4,16 +4,12 @@
 
 import os
 import numbers
-import collections
 from datetime import datetime
 import numpy as np
-from .. import settings
-from .. import stack
+from bluesky import settings, stack
 
-# Check if logdir exists, and if not, create it.
-if not os.path.exists(settings.log_path):
-    print 'Creating log path [' + settings.log_path + ']'
-    os.makedirs(settings.log_path)
+# Register settings defaults
+settings.set_variable_defaults(log_path='output')
 
 logprecision = '%.8f'
 
@@ -180,7 +176,7 @@ class CSVLogger:
         return self.file is not None
 
     def log(self, *additional_vars):
-        if self.file and len(self.selvars) > 0 and self.simt >= self.tlog:
+        if self.file and self.simt >= self.tlog:
             # Set the next log timestep
             self.tlog += self.dt
 
@@ -188,14 +184,14 @@ class CSVLogger:
             varlist = [v[0].__dict__.get(vname) for v in self.selvars for vname in v[1]]
             varlist += additional_vars
 
-            # Convert numeric arrays to text, leave text arrays untouched
-            if isinstance(varlist[0], collections.Container):
+            # Convert (numeric) arrays to text, leave text arrays untouched
+            if isinstance(varlist[0], str):
+                txtdata = [str(self.simt)] + [num2txt(col) for col in varlist]
+            else:
                 nrows = len(varlist[0])
                 if nrows == 0:
                     return
                 txtdata = [nrows * [str(self.simt)]] + [col2txt(col) for col in varlist]
-            else:
-                txtdata = [str(self.simt)] + [num2txt(col) for col in varlist]
 
             # log the data to file
             np.savetxt(self.file, np.vstack(txtdata).T, delimiter=',', newline='\n', fmt='%s')
