@@ -566,7 +566,7 @@ class RadarWidget(QGLWidget):
         # SSD
         if self.ssd_all or self.ssd_conflicts or len(self.ssd_ownship) > 0:
             self.ssd_shader.use()
-            gl.glUniform3f(self.ssd_shader.loc_vlimits, 4e4, 25e4, 500.0)
+            gl.glUniform3f(self.ssd_shader.loc_vlimits, pow(102.889, 2), pow(308.667 ,2), 308.667)
             gl.glUniform1i(self.ssd_shader.loc_nac, self.naircraft)
             self.ssd.draw(vertex_count=self.naircraft, n_instances=self.naircraft)
 

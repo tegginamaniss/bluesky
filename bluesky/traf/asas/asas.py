@@ -80,8 +80,8 @@ class ASAS(DynamicArrays):
         self.swasas       = True                       # [-] whether to perform CD&R
         self.tasas        = 0.0                        # Next time ASAS should be called
 
-        self.vmin         = 51.4                       # [m/s] Minimum ASAS velocity (100 kts)
-        self.vmax         = 308.6                      # [m/s] Maximum ASAS velocity (600 kts)
+        self.vmin         = 102.889                    # [m/s] Minimum ASAS velocity (200 kts)
+        self.vmax         = 308.667                    # [m/s] Maximum ASAS velocity (600 kts)
         self.vsmin        = -3000. / 60. * ft          # [m/s] Minimum ASAS vertical speed
         self.vsmax        = 3000. / 60. * ft           # [m/s] Maximum ASAS vertical speed
 

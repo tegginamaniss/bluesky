@@ -350,6 +350,12 @@ def init():
             bs.sim.setFixdt,
             "Fix the time step"
         ],
+        # "FOLLOW": [
+        #     "FOLLOW acid",
+        #     "acid",
+        #     bs.scr.pan,
+        #     "Pan screen (move view) to a waypoint, direction or aircraft"
+        # ],
         "GETWIND": [
             "GETWIND lat,lon,[alt]",
             "latlon,[alt]",
